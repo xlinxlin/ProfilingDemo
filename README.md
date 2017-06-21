@@ -8,6 +8,7 @@ Ubuntu 16.04LTS, Netbeans 8.2, GlassFish 4.1.1, Java EE 7, MySQL 5.7, JavaScript
 
 Libraries:</br>
 Spring Framework 4.0.1, jQuery 3.2.1, Highcharts, bootstrap 3.3.7, bootstrap-slider, json</br>
+
 Settings:</br>
 1.Restore the test table: mysql -uroot -p YourDatabaseName < backup.sql;</br>
 2.Change the database properties in applicationContext.xml.</br>
