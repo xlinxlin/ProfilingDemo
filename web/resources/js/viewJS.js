@@ -56,7 +56,7 @@ $(document).ready(function() {
         
         var minScore = parseFloat($('#minScore').val());
         var maxScore = parseFloat($('#maxScore').val());
-        $("#slider").slider({step: 0.01, min: minScore, max: maxScore,range: true, value: [4, 5]}).on('slideStop', function(){
+        $("#slider").slider({step: 0.01, min: minScore, max: maxScore,range: true, value: [minScore, minScore+2]}).on('slideStop', function(){
             var thresholdValue = new Array();
             thresholdValue = $('#slider').data('slider').getValue();
             var min = parseFloat(thresholdValue[0]);
