@@ -11,6 +11,9 @@ How To Use:</br>
 2.Use the slider to show your favourite result. </b>
 
 Screenshots:</b>
-[ProfilingDemo_initialization.png](http://xlin.me/ProfilingDemo/ProfilingDemo_initialization.png) </b>
-[ProfilingDemo_submit.png](http://xlin.me/ProfilingDemo/ProfilingDemo_submit.png)</br>
-[ProfilingDemo_slider.png](http://xlin.me/ProfilingDemo/ProfilingDemo_slider.png)</b>
+
+[ProfilingDemo_initialization.png](http://xlin.me/ProfilingDemo/ProfilingDemo_initialization.png)
+
+[ProfilingDemo_submit.png](http://xlin.me/ProfilingDemo/ProfilingDemo_submit.png) 
+
+[ProfilingDemo_slider.png](http://xlin.me/ProfilingDemo/ProfilingDemo_slider.png) 
