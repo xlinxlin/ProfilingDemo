@@ -3,7 +3,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 /**
- * This is the FeatureDao calss.
+ * This is the FeatureDao class.
  * 
  * @author yan
  */
