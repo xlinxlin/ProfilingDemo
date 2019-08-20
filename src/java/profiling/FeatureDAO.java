@@ -1,54 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package profiling;
 import java.util.List;
 import javax.sql.DataSource;
 
 /**
- *
+ * This is the FeatureDao calss.
+ * 
  * @author yan
  */
-
 public interface FeatureDAO {
-   /** 
-      * This is the method to be used to initialize
-      * database resources ie. connection.
+   
+  /**
+   * Sets data source.
+   * @param ds data source.
    */
    public void setDataSource(DataSource ds);
    
-   /** 
-      * This is the method to be used to create
-      * a record in the Student table.
+  /**
+   * Creates feature.
+   * @param name feature name.
+   * @param value1 feature value1.
+   * @param value2 feature value2.
+   * @param value3 feature value3.
+   * @param value4 feature value4.
+   * @param value5 feature value5.
    */
    public void create(String name, double value1,double value2,double value3,double value4,double value5);
    
-   /** 
-      * This is the method to be used to list down
-      * a record from the Student table corresponding
-      * to a passed student id.
+  /**
+   * Gets feature.
+   * @param id feature id.
    */
-   public Feature getFeature(Integer id);
+   public Feature getFeature(int id);
    
-   /** 
-      * This is the method to be used to list down
-      * all the records from the Student table.
+  /**
+   * Feature list. 
    */
    public List<Feature> listFeatures();
    
-   /** 
-      * This is the method to be used to delete
-      * a record from the Student table corresponding
-      * to a passed student id.
+  /**
+   * Deletes feature..
+   * @param id feature id.
    */
-   public void delete(Integer id);
+   public void delete(int id);
    
-   /** 
-      * This is the method to be used to update
-      * a record into the Student table.
+  /**
+   * Updates feature.
+   * @param id feature id.
+   * @param value1 feature value1.
+   * @param value2 feature value2.
+   * @param value3 feature value3.
+   * @param value4 feature value4.
+   * @param value5 feature value5.
    */
-   public void update(Integer id, double value1,double value2,double value3,double value4,double value5);
+   public void update(int id, double value1,double value2,double value3,double value4,double value5);
 }

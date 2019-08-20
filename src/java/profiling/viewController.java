@@ -1,32 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package profiling;
-//import java.util.HashMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.ui.ModelMap;
-
 import java.util.List;
-//import java.util.Map;
-//import java.util.Random;
 import javax.servlet.http.HttpServletRequest;
-//import org.json.simple.JSONObject;
-//import org.json.JSONArray;  
 import org.json.JSONObject;
-//import org.json.JSONException;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.web.bind.annotation.RequestParam;
-//import org.springframework.web.bind.annotation.ResponseBody;
-//import profiling.FeatureJDBCTemplate;
 
 /**
- *
+ * This is the View Controller Class.
+ * 
  * @author yan
  */
 
@@ -57,8 +41,8 @@ public class viewController {
             double maxX = 5.0;
             Random rand = new Random();
             double[] recordValues = new double[5];
-            for (int i=0;i<5;i++){
-                recordValues[i]=rand.nextDouble() * (maxX - minX) + minX;
+            for (int j=0;j<5;j++){
+                recordValues[j]=rand.nextDouble() * (maxX - minX) + minX;
             }
             FeatureJDBCTemplate.create(recordName, recordValues[0],recordValues[1],recordValues[2],recordValues[3],recordValues[4]);
       }*/
