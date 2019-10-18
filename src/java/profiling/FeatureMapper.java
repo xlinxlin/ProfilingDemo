@@ -17,6 +17,7 @@ public class FeatureMapper implements RowMapper<Feature> {
    * @throws java.sql.SQLException
    * @return feature.
    */ 
+    
    public Feature mapRow(ResultSet rs, int rowNum) throws SQLException {
       Feature feature = new Feature();
       feature.setId(rs.getInt("id"));
@@ -28,4 +29,5 @@ public class FeatureMapper implements RowMapper<Feature> {
       feature.setValue5(rs.getDouble("value5"));
       return feature;
    }
+
 }
