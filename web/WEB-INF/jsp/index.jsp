@@ -35,7 +35,7 @@
         <input  id="minScore" type="hidden" name="minScore" value=${minScore}>
         <input  id="maxScore" type="hidden" name="maxScore" value=${maxScore}>
        
-        <form action="${pageContext.request.contextPath}/view" method="get">
+        <form action="${pageContext.request.contextPath}/view" method="post">
             <table align="center">
                 <tr>
                     <th style="text-align:center">1</th>

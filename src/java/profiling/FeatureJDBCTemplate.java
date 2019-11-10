@@ -20,6 +20,7 @@ public class FeatureJDBCTemplate implements FeatureDAO{
     * Sets data source.
     * @param dataSource data source.
     */
+    @Override
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         this.jdbcTemplateObject = new JdbcTemplate(dataSource);
@@ -34,6 +35,7 @@ public class FeatureJDBCTemplate implements FeatureDAO{
     * @param value4 feature value4.
     * @param value5 feature value5.
     */
+    @Override
     public void create(String name, double value1, double value2, double value3, double value4, double value5) {
         String SQL = "insert into DataPoints (name, value1, value2, value3, value4, value5) values (?, ?, ?, ?, ?,?)";
         jdbcTemplateObject.update( SQL, name, value1, value2, value3, value4, value5);
@@ -44,6 +46,7 @@ public class FeatureJDBCTemplate implements FeatureDAO{
     * @param id feature id.
     * @return feature with given id.
     */
+    @Override
     public Feature getFeature(int id) {
         String SQL = "select * from DataPoints where id = ?";
         Feature feature = jdbcTemplateObject.queryForObject(SQL, 
@@ -55,10 +58,11 @@ public class FeatureJDBCTemplate implements FeatureDAO{
     * Gets feature list.
     * @return feature list.
     */
+    @Override
     public List<Feature> listFeatures() {
         String SQL = "select * from DataPoints";
         List <Feature> features = jdbcTemplateObject.query(SQL, new FeatureMapper());
-        JdbcTemplate jdbcTemplateObject = new JdbcTemplate(dataSource);
+        //JdbcTemplate jdbcTemplateObject = new JdbcTemplate(dataSource);
         return features;
     }
     
@@ -66,6 +70,7 @@ public class FeatureJDBCTemplate implements FeatureDAO{
     * Deletes feature.
     * @param id feature id.
     */
+    @Override
     public void delete(int id) {
         String SQL = "delete from DataPoints where id = ?";
         jdbcTemplateObject.update(SQL, id);
@@ -81,6 +86,7 @@ public class FeatureJDBCTemplate implements FeatureDAO{
     * @param value4 feature value4.
     * @param value5 feature value5.
     */
+    @Override
     public void update(int id, double value1, double value2, double value3, double value4, double value5){
         String SQL = "update DataPoints set value1 = ? , value2 = ? , value3 = ? , value4 = ? , value5 = ?  where id = ?";
         jdbcTemplateObject.update(SQL, id, value1, value2, value3, value4, value5);
